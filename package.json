@@ -23,6 +23,7 @@
       "style.json",
       "readme.txt",
       "readme.md",
+      "sample.png",
       ".git"
     ],
     "appId": "yosuke25.pagecutter",
