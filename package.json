@@ -1,0 +1,37 @@
+{
+  "name": "PageCutter",
+  "description": "PageCutter",
+  "main": "index.html",
+  "version": "1.0.0",
+  "window": {
+    "width": 1000,
+    "height": 782,
+    "min_width": 800,
+    "min_height": 632,
+    "frame": false,
+    "toolbar": false,
+    "icon": "./img/icon/icon-64px.png"
+  },
+  "scripts": {
+    "start": "nw ./"
+  },
+  "build": {
+    "nwVersion": "0.41.1",
+    "nwFlavor": "normal",
+    "output": "../build/",
+    "excludes": [
+      "style.json",
+      "readme.txt",
+      ".git"
+    ],
+    "appId": "yosuke25.pagecutter",
+    "win": {
+      "copyright": "(c) 2019 yosuke25"
+    },
+    "mac": {
+      "copyright": "(c) 2019 yosuke25",
+      "icon": "./img/icon/icon.icns",
+      "documentIcon": "./img/icon/icon.icns"
+    }
+  }
+}

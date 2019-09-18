@@ -1,0 +1,174 @@
+/* filesEditArea */
+div#filesEditArea {
+  width: 100%;
+  height: 100%;
+}
+
+/* filesEditPageNumber */
+div#filesEditPageNumber {
+  width: 50vw;
+  height: 10%;
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+}
+
+h1#filesEditPageNumberText {
+  font-size: 250%;
+  font-weight: 400;
+  margin: 0px 32px;
+  color: #312F2F;
+  user-select: none;
+}
+
+/* filesEditImageViewArea */
+div#filesEditImageViewArea {
+  width: 80%;
+  height: 80%;
+}
+
+img#filesEditImage {
+  width: 250px;
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+}
+
+/* filesEditCutterArea */
+div#filesEditCutterArea {
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+}
+
+div.filesEditCutLine {
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  left: 0px;
+  background-color: #312F2F;
+}
+
+div.filesEditCutLineDot {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  margin: auto;
+  background-color: #312F2F;
+  border-radius: 6px;
+}
+
+/* filesEditSplitArea */
+div#filesEditSplitArea {
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+}
+
+div.filesEditSplitBlock {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a.filesEditValidityLink {
+  margin-bottom: 70px;
+}
+
+div.filesEditValidityButton {
+  width: 42px;
+  height: 70px;
+  position: relative;
+  transition: all 0.3s;
+  transform-style: preserve-3d;
+}
+
+div.filesEditDisableBlock {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+div.filesEditEnableBlock {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+/* filesEditImageLink */
+a.filesEditImageLink :active {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+div.filesEditImageButton {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 30px;
+}
+
+/* filesEditImageButton */
+div#filesEditPreviousImageButton {
+  left: calc((10vw - 60px) / 2);
+}
+
+div#filesEditNextImageButton {
+  right: calc((10vw - 60px) / 2);
+}
+
+img.filesEditImageText {
+  width: 100%;
+  height: 100%;
+}
+
+/* filesEditToolArea */
+div#filesEditToolArea {
+  position: absolute;
+  margin: calc(((100vh - 32px) * 0.1 - 36px) / 2) auto;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+a.filesEditToolLink :active {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+div.filesEditToolButton {
+  width: 36px;
+  height: 36px;
+  margin: 0 12px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+img.filesEditToolImage {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,128 @@
+/* alertArea */
+div.customAlertArea {
+  width: 500px;
+  max-height: 380px;
+  position: absolute;
+  margin: auto;
+  top: -412px;
+  right: 0px;
+  left: 0px;
+  border-radius: 0px 0px 15px 15px;
+  background-color: rgba(255, 255, 255, 1);
+  transition: top 0.35s;
+  overflow: hidden;
+}
+
+/* iconArea */
+div.customAlertIconArea {
+  text-align: center;
+  margin: 25px 0px 0px 0px;
+}
+
+img.customAlertIcon {
+  width: 70px;
+  height: 70px;
+}
+
+/* textArea */
+div.customAlertTextArea {
+  width: 450px;
+  margin: auto;
+  overflow: hidden;
+}
+
+h1.customAlertTitle {
+  display: block;
+  font-size: 170%;
+  text-align: center;
+  margin: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #312F2F;
+}
+
+p.customAlertMessage {
+  display: -webkit-box;
+  text-align: center;
+  overflow: hidden;
+  margin: 0px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  word-wrap: break-word;
+  color: #312F2F;
+}
+
+/* linkArea */
+div.customAlertLinkArea {
+  margin: 12px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+img.customAlertButtonText {
+  height: 30px;
+  object-fit: contain;
+}
+
+/* okLink */
+a.customAlertOkLink :active {
+  background-color: #39A9DB;
+}
+
+div.customAlertOkButton {
+  width: 180px;
+  height: 45px;
+  margin: 0px 12px;
+  border-radius: 6px;
+  background-color: #2595C7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* cancelLink */
+a.customAlertCancelLink :active {
+  background-color: #B0B0B0;
+}
+
+div.customAlertCancelButton {
+  width: 180px;
+  height: 45px;
+  margin: 0px 12px;
+  border-radius: 6px;
+  background-color: #9C9C9C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* closeLink */
+a.customAlertCloseLink :active {
+  background-color: #5f5f5f;
+}
+
+div.customAlertCloseButton {
+  width: 230px;
+  height: 45px;
+  border-radius: 6px;
+  background-color: #4b4b4b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* pauseArea */
+div.pauseArea {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  display: none;
+}

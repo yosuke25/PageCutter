@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- css -->
+  <link rel="stylesheet" href="./css/windowFrame.css">
+  <link rel="stylesheet" href="./css/translateControl.css">
+  <link rel="stylesheet" href="./css/customAlert.css">
+  <link rel="stylesheet" href="./css/filesDrop.css">
+  <link rel="stylesheet" href="./css/filesEdit.css">
+  <link rel="stylesheet" href="./css/filesExport.css">
+  <link rel="stylesheet" href="./css/tooltip.css">
+  <link rel="stylesheet" href="./css/other.css">
+  <!-- js -->
+  <script type="text/javascript" src="./js/lib/adobeFontLoader.js"></script>
+  <script type="text/javascript" src="./js/lib/localforage.min.js"></script>
+  <script type="text/javascript" src="./js/lib/date-utils.min.js"></script>
+  <script type="text/javascript" src="./js/lib/setStyle.js"></script>
+  <script type="text/javascript" src="./js/lib/uuid.js"></script>
+  <script type="text/javascript" src="./js/windowFrame.js"></script>
+  <script type="text/javascript" src="./js/translateControl.js"></script>
+  <script type="text/javascript" src="./js/customAlert.js"></script>
+  <script type="text/javascript" src="./js/filesDrop.js"></script>
+  <script type="text/javascript" src="./js/filesSave.js"></script>
+  <script type="text/javascript" src="./js/filesLoading.js"></script>
+  <script type="text/javascript" src="./js/filesEdit.js"></script>
+  <script type="text/javascript" src="./js/filesExport.js"></script>
+  <script type="text/javascript" src="./js/tooltip.js"></script>
+  <script type="text/javascript" src="./js/other.js"></script>
+  <title>Page Cutter</title>
+</head>
+<body>
+  <!-- windowFrame -->
+  <div id="windowFrame">
+    <p id="windowTitle"></p>
+    <div id="windowLinkArea">
+      <a id="windowMinimizeLink" data-tooltip="最小化" href="javascript:void(0)" draggable="false">
+        <div id="windowMinimizeButton" class="windowButton">
+          <img id="windowMinimizeIcon" class="windowButtonIcon" src="./img/windowFrame/minimize.svg">
+        </div>
+      </a>
+      <a id="windowMaximizeAndUnmaximizeLink" data-tooltip="最大化/縮小" href="javascript:void(0)" draggable="false">
+        <div id="windowMaximizeAndUnmaximizeButton" class="windowButton">
+          <img id="windowMaximizeAndUnmaximizeIcon" class="windowButtonIcon" src="./img/windowFrame/maximize.svg">
+        </div>
+      </a>
+      <a id="windowCloseLink" data-tooltip="閉じる" href="javascript:void(0)" draggable="false">
+        <div id="windowCloseButton" class="windowButton">
+          <img id="windowCloseIcon" class="windowButtonIcon" src="./img/windowFrame/close.svg">
+        </div>
+      </a>
+    </div>
+  </div>
+  <!-- mainArea -->
+  <div id="mainArea">
+    <!-- translateArea -->
+    <div id="translateArea">
+      <div id="translateBoxOne" class="translateBox">
+        <!-- filesDropArea -->
+        <div id="filesDropArea" class="center">
+          <img id="filesDropText" src="./img/filesDrop/filesDropText.svg">
+          <img id="filesDropArrow" src="./img/filesDrop/filesDropArrow.svg">
+          <img id="filesDropSaucer" src="./img/filesDrop/filesDropSaucer.svg">
+          <div id="filesDropSurface" class="center"></div>
+        </div>
+      </div>
+      <div id="translateBoxTwo" class="translateBox">
+        <!-- filesEditArea -->
+        <div id="filesEditArea" class="center">
+          <!-- pageNumber -->
+          <div id="filesEditPageNumber">
+            <h1 id="filesEditPageNumberText"></h1>
+          </div>
+          <!-- imageViewArea -->
+          <div id="filesEditImageViewArea" class="center">
+            <img id="filesEditImage" src="./img/filesEdit/noImage.svg">
+            <!-- cutterArea -->
+            <div id="filesEditCutterArea"></div>
+            <!-- splitArea -->
+            <div id="filesEditSplitArea"></div>
+          </div>
+          <!-- previous -->
+          <a id="filesEditPreviousImageLink" data-tooltip="前のページ" class="filesEditImageLink" href="javascript:void(0)" draggable="false">
+            <div id="filesEditPreviousImageButton" class="filesEditImageButton">
+              <img id="filesEditPreviousImageText" src="./img/filesEdit/previous.svg">
+            </div>
+          </a>
+          <!-- next -->
+          <a id="filesEditNextImageLink" data-tooltip="次のページ" class="filesEditImageLink" href="javascript:void(0)" draggable="false">
+            <div id="filesEditNextImageButton" class="filesEditImageButton">
+              <img id="filesEditNextImageText" src="./img/filesEdit/next.svg">
+            </div>
+          </a>
+          <!-- toolArea -->
+          <div id="filesEditToolArea">
+            <!-- rotateLeft -->
+            <a id="filesEditToolRotateLeftLink" data-tooltip="左へ90°回転" class="filesEditToolLink" href="javascript:void(0)" draggable="false">
+              <div id="filesEditToolRotateLeftButton" class="filesEditToolButton">
+                <img id="filesEditToolRotateLeftImage" class="filesEditToolImage" src="./img/filesEdit/rotateLeft.svg">
+              </div>
+            </a>
+            <!-- rotateRight -->
+            <a id="filesEditToolRotateRightLink" data-tooltip="右へ90°回転" class="filesEditToolLink" href="javascript:void(0)" draggable="false">
+              <div id="filesEditToolRotateRightButton" class="filesEditToolButton">
+                <img id="filesEditToolRotateRightImage" class="filesEditToolImage" src="./img/filesEdit/rotateRight.svg">
+              </div>
+            </a>
+            <!-- flipHorizon -->
+            <a id="filesEditToolFlipHorizonLink" data-tooltip="水平に反転" class="filesEditToolLink" href="javascript:void(0)" draggable="false">
+              <div id="filesEditToolFlipHorizonButton" class="filesEditToolButton">
+                <img id="filesEditToolFlipHorizonImage" class="filesEditToolImage" src="./img/filesEdit/flipHorizon.svg">
+              </div>
+            </a>
+            <!-- flipVertical -->
+            <a id="filesEditToolFlipVerticalLink" data-tooltip="垂直に反転" class="filesEditToolLink" href="javascript:void(0)" draggable="false">
+              <div id="filesEditToolFlipVerticalButton" class="filesEditToolButton">
+                <img id="filesEditToolFlipVerticalImage" class="filesEditToolImage" src="./img/filesEdit/flipVertical.svg">
+              </div>
+            </a>
+            <!-- copyEditData -->
+            <a id="filesEditToolCopyEditDataLink" data-tooltip="前のページから編集情報をコピー" class="filesEditToolLink" href="javascript:void(0)" draggable="false">
+              <div id="filesEditToolCopyEditDataButton" class="filesEditToolButton">
+                <img id="filesEditToolCopyEditDataImage" class="filesEditToolImage" src="./img/filesEdit/copyEditData.svg">
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="translateBoxThree" class="translateBox">
+        <!-- filesExportArea -->
+        <div id="filesExportArea" class="center">
+          <!-- dirInputArea -->
+          <div id="filesExportDirInputArea" class="textInput">
+            <input id="filesExportDirInput" type="text" placeholder="OUTPUT">
+            <label><p>Output Folder :</p></label>
+          </div>
+          <!-- prefixInputArea -->
+          <div id="filesExportPrefixInputArea" class="textInput">
+            <input id="filesExportPrefixInput" type="text" placeholder="%YYYY%%MM%%DD%-">
+            <label><p>Prefix :</p></label>
+          </div>
+          <!-- checkInputArea -->
+          <div id="filesExportCheckInputArea">
+            <!-- typeInputArea -->
+            <div id="filesExportTypeInputArea" class="checkInput">
+              <p>Type</p>
+              <label>
+                <input id="filesExportTypeInput" type="checkbox">
+                <div></div>
+                <p>PNG</p>
+                <p>JPEG</p>
+              </label>
+            </div>
+            <!-- zeroPaddingInputArea -->
+            <div id="filesExportZeroPaddingInputArea" class="checkInput">
+              <p>Zero Padding</p>
+              <label>
+                <input id="filesExportZeroPaddingInput" type="checkbox">
+                <div></div>
+                <p>ON</p>
+                <p>OFF</p>
+              </label>
+            </div>
+          </div>
+          <!-- buttonArea -->
+          <div id="filesExportButtonArea">
+            <!-- clearButton -->
+            <a id="filesExportClearLink" data-tooltip="すべてを初期化" class="filesExportLink" href="javascript:void(0)" draggable="false">
+              <div id="filesExportClearButton" class="filesExportButton">
+                <p>Clear</p>
+              </div>
+            </a>
+            <!-- exportButton -->
+            <a id="filesExportExportLink" data-tooltip="ファイルを連番で書き出し" class="filesExportLink" href="javascript:void(0)" draggable="false">
+              <div id="filesExportExportButton" class="filesExportButton">
+                <p>Export</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- translateSwitchLinkArea -->
+    <div id="translateSwitchLinkArea">
+      <a id="translateSwitchOneLink" data-tooltip="読み込み" href="javascript:void(0)" draggable="false">
+        <div id="translateSwitchOneButton" class="translateSwichButton">
+          <img id="translateSwitchOneText" class="translateSwitchText" src="./img/translateControl/1.svg">
+        </div>
+      </a>
+      <a id="translateSwitchTwoLink" data-tooltip="編集" href="javascript:void(0)" draggable="false">
+        <div id="translateSwitchTwoButton" class="translateSwichButton">
+          <img id="translateSwitchTwoText" class="translateSwitchText" src="./img/translateControl/2.svg">
+        </div>
+      </a>
+      <a id="translateSwitchThreeLink" data-tooltip="書き出し" href="javascript:void(0)" draggable="false">
+        <div id="translateSwitchThreeButton" class="translateSwichButton">
+          <img id="translateSwitchThreeText" class="translateSwitchText" src="./img/translateControl/3.svg">
+        </div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

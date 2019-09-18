@@ -1,0 +1,47 @@
+div#filesDropArea {
+  width: 75%;
+  height: 75%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 30px;
+}
+
+img#filesDropText {
+  width: 400px;
+  object-fit: contain;
+  position: absolute;
+  margin: auto;
+  top: -35px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+}
+
+img#filesDropArrow {
+  width: 90px;
+  object-fit: contain;
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: -135px;
+  transition: bottom 0.5s;
+}
+
+img#filesDropSaucer {
+  width: 90px;
+  object-fit: contain;
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: -160px;
+}
+
+div#filesDropSurface {
+  width: auto;
+  height: auto;
+  border: 5px dotted #312F2F;
+  border-radius: 30px;
+}

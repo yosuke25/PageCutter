@@ -1,0 +1,18 @@
+div.tooltip {
+  height: 24px;
+  position: absolute;
+  margin: 10px 5px;
+  color: #FFFFFF;
+  background-color: #312F2F;
+  opacity: 0;
+  border-radius: 12px;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+p.tooltipText {
+  margin: 0px 10px;
+  font-size: 12px;
+}

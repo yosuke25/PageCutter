@@ -1,0 +1,37 @@
+@font-face {
+	font-family: 'M PLUS Rounded 1c';
+	src: url('../font/rounded-mplus-1c-light.ttf') format('truetype');
+}
+
+img, h1, p {
+  user-select: none;
+  pointer-events: none;
+}
+
+.center {
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+}
+
+h1, p, input {
+  font-family: 'fot-tsukuardgothic-std', 'M PLUS Rounded 1c', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  overflow: hidden;
+}
+
+div#mainArea {
+  width: 100%;
+  height: calc(100% - 32px);
+  position: absolute;
+  margin: 0px;
+  bottom: 0px;
+}

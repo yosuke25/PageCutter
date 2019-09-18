@@ -1,0 +1,74 @@
+div.windowButton {
+  width: 32px;
+  height: 32px;
+  transition: background-color 0.35s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img.windowButtonIcon {
+  width: 50%;
+  height: 50%;
+}
+
+div#windowFrame {
+  width: 100vw;
+  height: 32px;
+  position: fixed;
+  top: 0px;
+  background-color: rgba(49, 47, 47, 0.2);
+  -webkit-app-region: drag;
+}
+
+p#windowTitle {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #312F2F;
+  user-select: none;
+}
+
+div#windowLinkArea {
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  right: 0px;
+  display: flex;
+  -webkit-app-region: no-drag;
+}
+
+/* Minimize */
+a#windowMinimizeLink :hover {
+  background-color: #BBD347;
+}
+
+a#windowMinimizeLink :active {
+  transition: background-color 0s;
+  background-color: rgb(207, 231, 91);
+}
+
+/* Maximize And Unmaximize */
+a#windowMaximizeAndUnmaximizeLink :hover {
+  background-color: #FAD26A;
+}
+
+a#windowMaximizeAndUnmaximizeLink :active {
+  transition: background-color 0s;
+  background-color: rgb(255, 230, 126);
+}
+
+/* Close */
+a#windowCloseLink :hover {
+  background-color: #EF4644;
+}
+
+a#windowCloseLink :active {
+  transition: background-color 0s;
+  background-color: rgb(255, 90, 88);
+}

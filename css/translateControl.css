@@ -1,0 +1,73 @@
+/* translateSwitchLinkArea */
+div#translateSwitchLinkArea {
+  width: 180px;
+  position: absolute;
+  margin: calc(((100vh - 32px) * 0.1 - 36px) / 2) auto;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+div.translateSwichButton {
+  width: 36px;
+  height: 36px;
+  margin: 0px 12px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img.translateSwitchText {
+  width: 100%;
+  height: 100%;
+}
+
+/* 1 */
+div#translateSwitchOneButton {
+  transition: background-color 0.35s;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* 2 */
+div#translateSwitchTwoButton {
+  transition: background-color 0.35s;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 3 */
+div#translateSwitchThreeButton {
+  transition: background-color 0.35s;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* translateArea */
+div#translateArea {
+  width: 300vw;
+  height: 100%;
+}
+
+div.translateBox {
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  margin: auto;
+}
+
+/* 1 */
+div#translateBoxOne {
+  left: 0vw;
+}
+
+/* 2 */
+div#translateBoxTwo {
+  left: 100vw;
+}
+
+/* 3 */
+div#translateBoxThree {
+  left: 200vw;
+}
