@@ -29,7 +29,8 @@
     ],
     "appId": "yosuke25.pagecutter",
     "win": {
-      "copyright": "(c) 2019 yosuke25"
+      "copyright": "(c) 2019 yosuke25",
+      "icon": "./img/icon/icon-64px.ico"
     },
     "mac": {
       "copyright": "(c) 2019 yosuke25",
