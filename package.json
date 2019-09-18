@@ -22,6 +22,7 @@
     "excludes": [
       "style.json",
       "readme.txt",
+      "readme.md",
       ".git"
     ],
     "appId": "yosuke25.pagecutter",
